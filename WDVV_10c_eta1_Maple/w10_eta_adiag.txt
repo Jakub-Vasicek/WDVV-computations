@@ -1,0 +1,110 @@
+restart;
+read("Jets.s");
+with(ListTools):
+N:=10;
+coordinates([t,x],[seq(a||i,i=1..N)],6);
+dep_var:=[seq(a||i,i=1..N)];
+nc:=N;
+ncp:=nc+1;
+npl:=(ncp*(ncp-1))/2;
+gl3:=Matrix(nc,nc);
+cftel:=1;
+q:=Matrix(npl,npl);
+for i to npl do
+for j from i to npl do
+q(i,j):=cf||cftel;
+cftel:=cftel+1;
+if i <> j then q(j,i):=q(i,j) fi;
+od;
+od; 
+dependence(seq(cf||i(),i=1..cftel)):
+proj_coord:=Flatten([p0,dep_var]);
+plucker_coord:=[];
+for i from ncp by -1 to 1 do
+for j to i-1 do
+plucker_coord:=[op(plucker_coord), pc[i,j]]
+od;
+od;
+plucker_coord;
+for i from ncp by -1 to 1 do 
+for j to i-1 do
+pc[j,i]:= - pc[i,j];
+od; od;
+lie_coord:=[];
+el1:=0;el2:=0;
+for i to numelems(plucker_coord) do
+el1:=op(plucker_coord[i])[1]:
+el2:=op(plucker_coord[i])[2]:
+lie_coord:=[op(lie_coord),proj_coord[el1]*d||(proj_coord[el2])-proj_coord[el2]*d||(proj_coord[el1])]:
+od:
+
+quadcpl:=simplify(add(add(lie_coord[i]*q(i,j)*lie_coord[j],i=1..npl),j=1..npl)):
+p0:=1;
+dp0:=0;
+affine_diffs:=[seq(d||(dep_var[i]),i=1..N)];
+for i to nc do
+gl3(i,i):=coeff(quadcpl,(da||i)*(da||i));
+od:
+for i to nc do
+for j from i+1 to nc do
+gl3(i,j):=1/2*coeff(coeff(quadcpl,da||i),da||j);
+gl3(j,i):=gl3(i,j);
+od:
+od:
+for i to nc do
+for j to nc do
+for k to nc do
+C_lo(i,j,k):=1/3*(pd(gl3(k,i),dep_var[j])-pd(gl3(j,i),dep_var[k]));
+od; od; od;
+f_3x:=a1;f_2xy:=a2;f_2xz:=a3;f_2xw:=a4;f_x2y:=a5;f_xyz:=a6;f_x2z:=a7;f_xyw:=a8;f_xzw:=a9;f_x2w:=a10;
+read("w10_eta_adiag_eq.red"):
+A:=cons_laws_system:
+
+V:=[seq(A[i,2],i=1..numelems(A))]:
+jac_V:=Matrix(nc,nc);
+for i to nc do
+for j to nc do
+jac_V(i,j):=pd(V[i],dep_var[j]);
+od; od;
+ctel:=1;
+for i to nc do
+for h to nc do
+equ(ctel):=numer(
+add(gl3(i,j)*jac_V(j,h),j=1..nc)-add(gl3(h,j)*jac_V(j,i),j=1..nc)
+);
+ctel:=ctel+1;
+od; od;
+ctel;
+for i to nc do
+for j to nc do
+for k to nc do
+equ(ctel):=numer(
+add(C_lo(m,k,j)*jac_V(m,i),m=1..nc) + add(C_lo(m,i,k)*jac_V(m,j),m=1..nc) + add(C_lo(m,j,i)*jac_V(m,k),m=1..nc)
+);
+ctel:=ctel+1;
+od; od; od;
+ctel;
+for p to nc do
+for k to nc do
+for l to nc do
+equ(ctel):=numer(
+add(gl3(p,h)*pd(jac_V(h,l),dep_var[k]),h=1..nc)+add(C_lo(p,k,h)*jac_V(h,l),h=1..nc)-add(C_lo(p,h,l)*jac_V(h,k),h=1..nc)
+);
+ctel:=ctel+1;
+od; od; od;
+ctel;
+equnum:=ctel-1;
+for i to equnum do
+equ(i):= collect(equ(i),dep_var,'distributed'):
+od:
+for i to equnum do
+C_equ(i):=[coeffs(equ(i),dep_var)]:
+for j to numelems(C_equ(i)) do
+equ(ctel):=C_equ(i)[j]:
+ctel:=ctel+1:
+od; od;
+sol:=solve({seq(equ(i),i=equnum..ctel-1)},{seq(cf||i,i=1..cftel-1)});
+RESULT:=subs(sol,gl3);
+
+save RESULT, "w10_eta_adiag_result.txt";
+
