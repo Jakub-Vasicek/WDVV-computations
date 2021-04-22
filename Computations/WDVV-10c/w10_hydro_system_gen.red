@@ -1,4 +1,5 @@
 % WDVV equation in 10 components: local Hamiltonian operator
+% Here we generate for eta2 Dubrovin's normal form
 % 2021-04-19
 % By JV&RV 
 
@@ -27,13 +28,7 @@ vars:=indep_var$
 % gwl: lower indices, gwu: upper indices
 matrix gwl(nc,nc)$
 % eta matrix defining the wdvv equations
-gwl:=mat((0,0,0,0,1),(0,0,0,1,0),(0,0,1,0,0),(0,1,0,0,0),(1,0,0,0,0))$
-% Code for a generic metric
-%% for i:=1:nc do for j:=i:nc do
-%% <<
-%%   gwl(i,j):=mkid(mkid(gw,i),j);
-%%   if i neq j then gwl(j,i):=gwl(i,j)
-%% >>$
+gwl:=mat((1,0,0,0,1),(0,0,0,1,0),(0,0,1,0,0),(0,1,0,0,0),(1,0,0,0,0))$
 
 gwu:=gwl**(-1)$
 
