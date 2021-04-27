@@ -8,7 +8,7 @@ Below we describe the files used for computations and what they each contain.
 
 I. Finding the nonlocal first order operators for the case N=3
 
-In the folder ..\WDVV-3c\etaX-xx\ there are all relevant files for finding
+In the folder ..\WDVV-3\etaX-xx\ there are all relevant files for finding
 the operator of Ferapontov type for the case etaX. There are following files:
 
  1) dne3_lho2.red
