@@ -211,7 +211,7 @@ S:=q*om_l;
 % Output for Maple to find Jordan form of S
 off echo$ off nat$
 
-out "w3c_3ord_eta2_res.mw"$
+out "w3c_3ord_CentroAff_res.mw"$
 
 write "restart;";
 write "with(LinearAlgebra);";
@@ -222,7 +222,7 @@ write "S(",i,",",j,"):=",S(i,j),":";
 write "S;";
 write "JS:=JordanForm(S);";
 
-shut "w3c_3ord_eta2_res.mw";
+shut "w3c_3ord_CentroAff_res.mw";
 
 on nat;
 

@@ -73,6 +73,7 @@ in "riemann4.red"$
 
 % Loading the metric from the computation in the file ho2
 in "nonloc_ho2_res.red"$
+c_3:=1/2;
 
 for i:=1:nc do for j:=1:nc do gu1(i,j):=gu1(i,j)$
 gl1:=gu1**(-1)$

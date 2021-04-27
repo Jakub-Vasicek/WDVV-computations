@@ -1,4 +1,4 @@
-In this folder there are the programms, as well as their results, regarding the
+In this folder there are the programs, as well as their results, regarding the
 computation of the third-order Hamiltonian operator for WDVV equation in N=5
 for Dubrovin's second normal form. The files contain the following:
 
@@ -8,7 +8,7 @@ for Dubrovin's second normal form. The files contain the following:
  2) w10_eta2_eq.red
  -this file contains the WDVV system as well as the hydrodynamic-type one
 
- 3) Jets.s
+ 3*) Jets.s
  -file containing the Maple extension for calculus in jet spaces
 
  4) w10_eta2.mw
@@ -26,6 +26,9 @@ for Dubrovin's second normal form. The files contain the following:
 Note: Files are set up in a way that the computation can be started right away.
 However, the computation had to be simplified. It is practically impossible to 
 solve all 2100 equations so first 60 were taken only and the solution was 
-obtained and checked porpperly. Still the computation demands a huge amount of
+obtained and checked properly. Still the computation demands a huge amount of
 resources so please consider using a very powerful machine or even a 
 supercomputer.
+
+*jets.s should be downloaded from the official software page: 
+http://jets.math.slu.cz/

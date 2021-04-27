@@ -1,4 +1,4 @@
-The programms contained in this folder sole the problem of finding a 
+The programs contained in this folder sole the problem of finding a 
 third-order local Hamiltonian operator for the second Dubrovin's normal form.
 
  1) w6_dubrovin_eta2.red
@@ -12,5 +12,3 @@ third-order local Hamiltonian operator for the second Dubrovin's normal form.
 
  4) w6_ham1_dubrovin_eta2_res.red
  -the operator is stored here
-
-Note: The *res.red files have to be produced by running the programms

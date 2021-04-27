@@ -1,0 +1,98 @@
+
+eq_curv:={0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+ - (gam + 1),
+ - bet,
+gam + 1,
+0,
+ - (alp + 1),
+bet,
+alp + 1,
+0,
+0,
+( - alp*u2*u3 - alp*u3 - bet*u1*u3 - bet*u2**2 - 2*bet*u2 + bet*u3**2 - u2*u3 - 
+u3)/(u2**2 + 2*u2 + 1),
+(bet*u1 - 2*bet*u3 - gam*u2 - gam - u2 - 1)/(u2 + 1),
+(alp*u2*u3 + alp*u3 + bet*u1*u3 + bet*u2**2 + 2*bet*u2 - bet*u3**2 + u2*u3 + u3)
+/(u2**2 + 2*u2 + 1),
+0,
+(alp*u1 - 2*alp*u3 - bet*u2 - bet + u1 - 2*u3)/(u2 + 1),
+( - bet*u1 + 2*bet*u3 + gam*u2 + gam + u2 + 1)/(u2 + 1),
+( - alp*u1 + 2*alp*u3 + bet*u2 + bet - u1 + 2*u3)/(u2 + 1),
+0,
+0,
+gam + 1,
+bet,
+ - (gam + 1),
+0,
+alp + 1,
+ - bet,
+ - (alp + 1),
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+( - bet*u3)/(u2 + 1),
+( - u3*(alp + 1))/(u2 + 1),
+(bet*u3)/(u2 + 1),
+0,
+(alp*u1*u3 + alp*u2**2 + 2*alp*u2 - alp*u3**2 + bet*u1*u2 + bet*u1 - 2*bet*u2*u3
+ - 2*bet*u3 - gam*u2**2 - 2*gam*u2 - gam + u1*u3 - u3**2 - 1)/(u2**2 + 2*u2 + 1)
+,
+(u3*(alp + 1))/(u2 + 1),
+( - alp*u1*u3 - alp*u2**2 - 2*alp*u2 + alp*u3**2 - bet*u1*u2 - bet*u1 + 2*bet*u2
+*u3 + 2*bet*u3 + gam*u2**2 + 2*gam*u2 + gam - u1*u3 + u3**2 + 1)/(u2**2 + 2*u2 +
+ 1),
+0,
+0,
+(alp*u2*u3 + alp*u3 + bet*u1*u3 + bet*u2**2 + 2*bet*u2 - bet*u3**2 + u2*u3 + u3)
+/(u2**2 + 2*u2 + 1),
+( - bet*u1 + 2*bet*u3 + gam*u2 + gam + u2 + 1)/(u2 + 1),
+( - alp*u2*u3 - alp*u3 - bet*u1*u3 - bet*u2**2 - 2*bet*u2 + bet*u3**2 - u2*u3 - 
+u3)/(u2**2 + 2*u2 + 1),
+0,
+( - alp*u1 + 2*alp*u3 + bet*u2 + bet - u1 + 2*u3)/(u2 + 1),
+(bet*u1 - 2*bet*u3 - gam*u2 - gam - u2 - 1)/(u2 + 1),
+(alp*u1 - 2*alp*u3 - bet*u2 - bet + u1 - 2*u3)/(u2 + 1),
+0,
+0,
+(bet*u3)/(u2 + 1),
+(u3*(alp + 1))/(u2 + 1),
+( - bet*u3)/(u2 + 1),
+0,
+( - alp*u1*u3 - alp*u2**2 - 2*alp*u2 + alp*u3**2 - bet*u1*u2 - bet*u1 + 2*bet*u2
+*u3 + 2*bet*u3 + gam*u2**2 + 2*gam*u2 + gam - u1*u3 + u3**2 + 1)/(u2**2 + 2*u2 +
+ 1),
+( - u3*(alp + 1))/(u2 + 1),
+(alp*u1*u3 + alp*u2**2 + 2*alp*u2 - alp*u3**2 + bet*u1*u2 + bet*u1 - 2*bet*u2*u3
+ - 2*bet*u3 - gam*u2**2 - 2*gam*u2 - gam + u1*u3 - u3**2 - 1)/(u2**2 + 2*u2 + 1)
+,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0};
+
+
+;end;
+

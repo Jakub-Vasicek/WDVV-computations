@@ -35,6 +35,8 @@ gw33:=mu;
 % Leting mu=2 for speeding up the computation (can't be 1 - degenerate matrix;
 % and 0 is another case from Dubrovin's classification)
 mu:=2;
+% It is much faster to compute separately for rho=1 and rho=-1 than to substitute at the end
+rho:=1;
 
 % Loading the interface to cdiff packages;
 load_package cde;

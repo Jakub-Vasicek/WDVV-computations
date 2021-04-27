@@ -134,4 +134,15 @@ sb_res:=euler_df(sb13(1))$
 A:=sub({rho=1},sb_res);
 B:=sub({rho=-1},sb_res);
 
+off nat$
+off echo$
+out <<resfile>>;
+
+write A;
+write B;
+write ";end;";
+shut <<resfile>>;
+on echo$
+on nat$
+
 ;end;
