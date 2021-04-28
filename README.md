@@ -7,5 +7,4 @@ separate README files with more specific information in each of those
 directories.
 
 The above calculations are discussed in the paper by J. Vasicek and R. Vitolo:
-"WDVV equations and invariant bi-Hamiltonian formalism", to appear in arXiv.org
-(2021).
+"WDVV equations and invariant bi-Hamiltonian formalism", https://arxiv.org/abs/2104.13206.
