@@ -32,9 +32,6 @@ gw22:=1;
 gw23:=0;
 gw33:=0;
 
-% We have to simplify the computation, it takes too long, however works for arbitrary mu
-mu:=-1;
-
 % Loading the interface to cdiff packages;
 load_package cde;
 

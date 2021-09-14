@@ -32,9 +32,6 @@ gw22:=1;
 gw23:=0;
 gw33:=0;
 
-% We have to simplify the computation, it takes too long, however works for arbitrary mu
-mu:=-1;
-
 % Loading the interface to cdiff packages;
 load_package cde;
 
@@ -76,9 +73,9 @@ in "riemann4.red"$
 
 % Loading the metric from the computation in the file lho3
 in "dne3_lho3_res.red"$
-c_3:=1/2;
 
 for i:=1:nc do for j:=1:nc do gu1(i,j):=gu1(i,j)$
+% gl1:=gu1**(-1)$
 
 operator gl1_op,gu1_op$
 for i:=1:nc do for j:=1:nc do gl1_op(i,j):=gl1(i,j)$
@@ -100,13 +97,20 @@ for j:=1:3 join
          gam*(idm(i,k)*idm(j,h) - idm(i,h)*idm(j,k))
       $
 
-% The constants alp=-mu^2, bet=0 and gamma=mu fulfill the above condition 
+% The constants alp=1, bet=0 and gamma=1 fulfill the above condition 
 % (and are the ONLY solution), checked, OK:
+
 sub({
-  alp=-mu^2,
+  alp=-(mu^2),
   bet=0
   ,gam=mu
   },eq_curv);
+
+pause;
+
+alp:=-(mu^2);
+bet:=0;
+gam:=mu;
 
 off nat$
 off echo$
