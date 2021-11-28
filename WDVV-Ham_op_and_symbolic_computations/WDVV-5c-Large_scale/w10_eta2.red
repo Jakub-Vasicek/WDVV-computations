@@ -1,5 +1,5 @@
 % WDVV equation in 10 components: local Hamiltonian operator
-% 2016-02-14
+% 2021-11-28
 
 % Defining the WDVV equations using
 % as eta the antidiagonal identity matrix.
@@ -62,8 +62,6 @@ for s:=1:nc sum
     ev_svf(part(tot_der,k),ev_svf(part(tot_der,i),
       ev_svf(part(tot_der,s),cap_f)))*gwu(s,p)*
   ev_svf(part(tot_der,p),ev_svf(part(tot_der,j),ev_svf(part(tot_der,n),cap_f)))
-%    td(cap_f,part(indep_var,k),part(indep_var,i),part(indep_var,s))*gwu(s,p)*
-%  td(cap_f,part(indep_var,p),part(indep_var,j),part(indep_var,n))
 )
 -
 (
@@ -72,9 +70,6 @@ for s:=1:nc sum
     ev_svf(part(tot_der,j),ev_svf(part(tot_der,i),
       ev_svf(part(tot_der,s),cap_f)))*gwu(s,p)*
   ev_svf(part(tot_der,p),ev_svf(part(tot_der,k),ev_svf(part(tot_der,n),cap_f)))
-%    td(cap_f,part(indep_var,j),part(indep_var,i),part(indep_var,s))
-%      *gwu(s,p)*
-%	td(cap_f,part(indep_var,p),part(indep_var,k),part(indep_var,n)))
     )
       )
 $
