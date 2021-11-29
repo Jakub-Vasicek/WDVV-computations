@@ -1,8 +1,6 @@
 restart;
-read("Jets.s");
 with(ListTools):
 N:=10;
-coordinates([t,x],[seq(a||i,i=1..N)],6);
 dep_var:=[seq(a||i,i=1..N)];
 nc:=N;
 ncp:=nc+1;

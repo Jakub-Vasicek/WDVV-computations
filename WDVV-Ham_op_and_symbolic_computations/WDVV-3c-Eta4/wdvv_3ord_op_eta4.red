@@ -163,42 +163,6 @@ put_equations_used tel;
 
 for i:=ctel+1:tel do integrate_equation i;
 
-% The matrix Omega of the Plucker's quadric in upper indexes
-matrix om_u(6,6)$
-% Initialize only nonzero elements
-om_u(1,6):=-1$
-om_u(2,5):=1$
-om_u(3,4):=-1$
-om_u(4,3):=-1$
-om_u(5,2):=1$
-om_u(6,1):=-1$
-
-% The matrix Omega of the Plucker's quadric in lower indexes
-om_l:=om_u**(-1);
-
-% And finally the contraction by S
-matrix S(6,6);
-S:=q*om_l;
-
-
-% Output for Maple to find Jordan form of S
-off echo$ off nat$
-
-out "w3c_3ord_eta4_res.mw"$
-
-write "restart;";
-write "with(LinearAlgebra);";
-write "# Segre matrix of the metric S";
-write "S:=Matrix(6,6):";
-for i:=1:6 do for j:=1:6 do
-write "S(",i,",",j,"):=",S(i,j),":";
-write "S;";
-write "JS:=JordanForm(S);";
-
-shut "w3c_3ord_eta4_res.mw";
-
-on nat; on echo;
-
 gu3:=gl3**(-1)$
 
 operator equ2$
@@ -218,7 +182,6 @@ for m:=1:ncomp do
 
 procedure showeq();
   for i:=1:eqtel2 do if equ2 i neq 0 then write "eq. ",i," : ",equ2 i;
-
 
 pause;
 
