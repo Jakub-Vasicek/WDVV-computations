@@ -30,9 +30,17 @@ Riemann lib	riemann4.red
 
 
 The file where we use jacobi.mpl is in \
---Computation of compatibility of the above operators in Maple using jacobi.mpl 
-[A1,A3]		WDVV-3c-Compat_Example.mw
-(I still need to do more checking in the above one)
+--Computation of compatibility of the above operators in Maple using jacobi.mpl
+
+WDVV-3c-Compat_Example_Eta4_not_working.mw
+-this is the file where should be a working example for Eta4 (with the 
+simplification eta=mu=1). However, I don't know how to plug the w^1_alpha 
+matrix. I also think that you did some of those computations for checking by 
+yourself, so the compuattion should be somewhere.
+
+WDVV-3c-Compat_Example_using_wnlp_packages.mw
+-in this file I use a template from the article on computaiton of non-local 
+bracket and I add a third-order one and check that they are compatible. 
 
 
 Files for computation on supercomputer are in \WDVV-5c-Large_scale
