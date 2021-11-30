@@ -39,11 +39,11 @@ Files for computation on supercomputer are in \WDVV-5c-Large_scale
 Starting script		starter.sh
 Specific file script	w10_eta2.sh
 Instructions for Maple	w10_eta2.txt
+PDE system generator	w10_hydro_system_gen.red
 PDE system for input	w10_eta2_eq.red
+Result checking		w10_ham1_eta2_check.red
 
 --Accesory files
 Maple WS		w10_eta2.mw
-File for 
-generating PDEs		w10_eta2.red
 Result			w10_eta2_result.txt
 
